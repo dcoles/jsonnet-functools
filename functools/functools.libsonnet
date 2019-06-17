@@ -39,4 +39,22 @@
       else
         aux(xs, n + 1) tailstrict;
     aux(xs, 0),
+
+  // Apply `args` to function `fn`.
+  apply(fn, args)::
+    local len = std.length(args);
+    if len == 0 then
+      fn()
+    else if len == 1 then
+      fn(args[0])
+    else if len == 2 then
+      fn(args[0], args[1])
+    else if len == 3 then
+      fn(args[0], args[1], args[2])
+    else if len == 4 then
+      fn(args[0], args[1], args[2], args[3])
+    else if len == 5 then
+      fn(args[0], args[1], args[2], args[3], args[4])
+    else
+      error 'apply only supports up to 5 args',
 }

@@ -22,6 +22,9 @@ Returns `true` iff one (or more) values in an array `xs` is `true`.
 
 Short-circuts on first `true` value found.
 
+### functools.apply(func, args)
+Apply `args` to function `fn`.
+
 # Licence
 Apache License 2.0.
 
