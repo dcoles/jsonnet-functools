@@ -11,3 +11,7 @@ install:
 .PHONY: reformat
 reformat:
 	jsonnetfmt -i functools/*.libsonnet
+
+.PHONY: test
+test:
+	jsonnet tests.jsonnet
