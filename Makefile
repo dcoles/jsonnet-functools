@@ -7,3 +7,7 @@ MODULE_DIR ?= $(PREFIX)/share/jsonnet-$(JSONNET_VERSION)
 install:
 	install -d "${MODULE_DIR}/functools"
 	install -t "${MODULE_DIR}/functools" functools/*.libsonnet
+
+.PHONY: reformat
+reformat:
+	jsonnetfmt -i functools/*.libsonnet
